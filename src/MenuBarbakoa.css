@@ -13,3 +13,52 @@
 .bbk-drawer-footer{padding:24px 28px 30px;border-top:1px solid #563633;background:#1b1212}.bbk-total{display:flex;justify-content:space-between;align-items:center;gap:12px}.bbk-total span{font-size:12px;letter-spacing:1.2px;color:#c5aca5}.bbk-total strong{font-size:24px}.bbk-drawer-footer p{color:#9d8580;font-size:11px;line-height:1.5;margin:14px 0 20px}.bbk-whatsapp{width:100%;padding:17px 12px;background:#bd363f;color:#fff;border:0;border-radius:10px;font-weight:800;letter-spacing:.5px;cursor:pointer}.bbk-whatsapp:hover:not(:disabled){background:#e04c55}.bbk-whatsapp:disabled{opacity:.4;cursor:not-allowed}
 @media(max-width:650px){.bbk-floating-cart{right:12px;bottom:12px;padding:11px 13px}.bbk-drawer-head{padding:24px 20px}.bbk-drawer-items{padding:10px 20px}.bbk-drawer-footer{padding:20px}.bbk-drawer-head h2{font-size:38px}}
 @media(prefers-reduced-motion:reduce){.bbk-cart-bounce{animation:none}.bbk-cart-overlay,.bbk-cart-drawer{transition:none}}
+
+/* =========================================
+   BARBAKOA — CORRECCIÓN CARRITO LATERAL
+========================================= */
+
+.bbk-cart-drawer {
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.bbk-drawer-head {
+  flex-shrink: 0;
+}
+
+.bbk-drawer-items {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.bbk-drawer-footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+@media (max-width: 650px) {
+  .bbk-cart-drawer {
+    width: 100%;
+  }
+}
+
+/* REBOTE AL AGREGAR PRODUCTOS */
+
+@keyframes bbkAgregarRebote {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.14); }
+  60% { transform: scale(0.94); }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.menu-bbk-card-bottom button.bbk-agregar-rebote {
+  animation: bbkAgregarRebote 0.5s ease;
+}

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function ScrollReveal() {
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>(
-      "#nosotros, #menu, #ubicacion"
+      "#nosotros, #ubicacion"
     );
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

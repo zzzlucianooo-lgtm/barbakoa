@@ -76,7 +76,9 @@ export default function MenuBarbakoa() {
   const [panelAbierto, setPanelAbierto] = useState(false);
   const [rebote, setRebote] = useState(0);
  
-const [, setUltimoAgregado] = useState('');
+
+const [ultimoAgregado, setUltimoAgregado] = useState('');
+
 
   const visibles = useMemo(() => productos.filter(p =>
     (categoria === 'Todos' || p.categoria === categoria) &&
@@ -133,7 +135,21 @@ const [, setUltimoAgregado] = useState('');
           <div className="menu-bbk-card-top"><span className="menu-bbk-category">{p.categoria}</span><span className="menu-bbk-number">{String(i + 1).padStart(2, '0')}</span></div>
           <h3>{p.nombre}</h3><p>{p.descripcion}</p>
           {p.nota && <small>{p.nota}</small>}
-          <div className="menu-bbk-card-bottom"><strong>{formatoPrecio(p.precio)}</strong><button type="button" onClick={() => agregar(p.nombre)} aria-label={`Agregar ${p.nombre} al carrito`}>+ AGREGAR</button></div>
+          <div className="menu-bbk-card-bottom"><strong>{formatoPrecio(p.precio)}</strong>
+<button
+  type="button"
+  key={`${p.nombre}-${ultimoAgregado === p.nombre ? rebote : 0}`}
+  className={
+    ultimoAgregado === p.nombre && rebote > 0
+      ? "bbk-agregar-rebote"
+      : ""
+  }
+  onClick={() => agregar(p.nombre)}
+  aria-label={`Agregar ${p.nombre} al carrito`}
+>
+  {ultimoAgregado === p.nombre ? "✓ AGREGADO" : "AGREGAR +"}
+</button>
+</div>
         </article>)}
       </div>
       {visibles.length === 0 && <div className="menu-bbk-empty">No encontramos productos con esa búsqueda.</div>}
