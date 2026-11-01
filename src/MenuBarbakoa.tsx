@@ -75,7 +75,9 @@ export default function MenuBarbakoa() {
   const [carrito, setCarrito] = useState<Record<string, number>>({});
   const [panelAbierto, setPanelAbierto] = useState(false);
   const [rebote, setRebote] = useState(0);
-  const [ultimoAgregado, setUltimoAgregado] = useState('');
+ 
+const [, setUltimoAgregado] = useState('');
+
   const visibles = useMemo(() => productos.filter(p =>
     (categoria === 'Todos' || p.categoria === categoria) &&
     `${p.nombre} ${p.descripcion}`.toLocaleLowerCase('es').includes(busqueda.toLocaleLowerCase('es'))
