@@ -1,0 +1,388 @@
+
+/* ======================================
+   BARBAKOA — ENCONTRANOS
+====================================== */
+
+.ubicacion-section {
+  position: relative;
+  padding: 115px 7% 35px;
+  color: #f5ede5;
+  background-color: #0c0909;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      rgba(160, 125, 100, 0.025) 1px,
+      transparent 3px,
+      transparent 7px
+    ),
+    repeating-linear-gradient(
+      93deg,
+      transparent 0px,
+      rgba(170, 130, 105, 0.035) 1px,
+      transparent 4px,
+      transparent 11px
+    ),
+    radial-gradient(
+      ellipse at 70% 55%,
+      rgba(105, 17, 23, 0.20),
+      transparent 60%
+    );
+}
+
+.ubicacion-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.ubicacion-header {
+  margin-bottom: 65px;
+}
+
+.ubicacion-eyebrow {
+  display: block;
+  color: #c74449;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.ubicacion-header h2 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(52px, 7vw, 100px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin: 0 0 18px;
+}
+
+.ubicacion-header h2 span {
+  color: #c83c43;
+}
+
+.ubicacion-header > p {
+  font-size: 17px;
+  color: #b8a8a0;
+}
+
+/* COLUMNAS */
+
+.ubicacion-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 85px;
+  align-items: center;
+}
+
+/* COLUMNA IZQUIERDA */
+
+.ubicacion-small-label {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: #c74449;
+}
+
+.ubicacion-intro h3 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(38px, 4vw, 62px);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 20px 0;
+}
+
+.ubicacion-intro h3 span {
+  color: #c83c43;
+}
+
+.ubicacion-intro > p {
+  max-width: 420px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #b8a8a0;
+}
+
+.ubicacion-datos {
+  margin-top: 45px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.ubicacion-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.ubicacion-dato-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(199,68,73,0.35);
+  background: rgba(199,68,73,0.08);
+  border-radius: 13px;
+  color: #d84b50;
+}
+
+.ubicacion-dato-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ubicacion-dato-label {
+  display: block;
+  color: #c74449;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.ubicacion-dato p {
+  margin: 0 0 5px;
+  color: #f5ede5;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ubicacion-dato small {
+  color: #9f918b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* BOTONES */
+
+.ubicacion-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.ubicacion-btn {
+  min-height: 54px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 0 23px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.ubicacion-btn span {
+  font-size: 18px;
+}
+
+.ubicacion-btn:hover {
+  transform: translateY(-4px);
+}
+
+.ubicacion-btn-primary {
+  background: #c83c43;
+  color: #fff;
+}
+
+.ubicacion-btn-primary:hover {
+  background: #e14c54;
+}
+
+.ubicacion-btn-outline {
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #f5ede5;
+  background: rgba(255,255,255,0.025);
+}
+
+.ubicacion-btn-outline:hover {
+  border-color: #c83c43;
+}
+
+/* MAPA */
+
+.ubicacion-mapa-columna {
+  min-width: 0;
+}
+
+.ubicacion-mapa-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c7b7ae;
+}
+
+.ubicacion-mapa-punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d44349;
+  box-shadow: 0 0 16px rgba(212,67,73,0.7);
+}
+
+.ubicacion-mapa {
+  height: 530px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #1c1715;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.28);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ubicacion-mapa:hover {
+  border-color: rgba(199,68,73,0.5);
+  box-shadow: 0 35px 100px rgba(0,0,0,0.4);
+}
+
+.ubicacion-mapa iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ubicacion-mapa-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 20px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #93847f;
+}
+
+.ubicacion-mapa-footer a {
+  color: #d84b50;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.ubicacion-mapa-footer a:hover {
+  color: #ff777b;
+}
+
+/* FOOTER */
+
+.ubicacion-footer {
+  margin-top: 125px;
+}
+
+.ubicacion-footer-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(199,68,73,0.45),
+    transparent
+  );
+}
+
+.ubicacion-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 0;
+  color: #8f817d;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+}
+
+.ubicacion-footer-content a {
+  color: #c74449;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.ubicacion-footer-content a:hover {
+  color: #f5ede5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .ubicacion-section {
+    padding: 85px 6% 25px;
+  }
+
+  .ubicacion-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .ubicacion-header {
+    margin-bottom: 45px;
+  }
+
+  .ubicacion-mapa {
+    height: 430px;
+  }
+
+  .ubicacion-footer {
+    margin-top: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ubicacion-header h2 {
+    font-size: clamp(46px, 12vw, 65px);
+  }
+
+  .ubicacion-intro h3 {
+    font-size: 42px;
+  }
+
+  .ubicacion-dato p {
+    font-size: 15px;
+  }
+
+  .ubicacion-botones {
+    flex-direction: column;
+  }
+
+  .ubicacion-btn {
+    width: 100%;
+  }
+
+  .ubicacion-mapa {
+    height: 350px;
+    border-radius: 15px;
+  }
+
+  .ubicacion-footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ubicacion-btn,
+  .ubicacion-mapa {
+    transition: none;
+  }
+}
